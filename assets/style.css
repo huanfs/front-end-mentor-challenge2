@@ -1,0 +1,117 @@
+:root{
+    --branco:#fff;
+    --bg: #ee4b7cdb;
+    --btn1: #7e2bfacf;
+    --btn2: #1ced57;
+    --heightInp: 50px;
+    --boldFont: bolder;
+    --hoverBtn:0.5;
+}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:var(--bg);
+    background-image:url("../images/bg-intro-desktop.png");
+    font-family:Arial, 'Helvetica', sans-serif
+}
+.left{
+    width:550px;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2em;
+}
+.left h1{
+    font-size:3em;
+    color:var(--branco);
+}
+.left p{
+    color:var(--branco);
+}
+.right{
+    width:550px;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.right .form{
+    height:430px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1em;
+    padding:2em 0;
+    background-color:var(--branco);
+    box-shadow:0px 5px 2px #00000051;
+    border-radius:5px;
+}
+.right button:first-child{
+    width:100%;
+    height:var(--heightInp);
+    border:none;
+    border-radius:5px;
+    outline:0;
+    background-color:var(--btn1);
+    color:var(--branco);
+    font-weight:var(--boldFont);
+    box-shadow:0px 5px 2px #00000051;
+}
+.form input{
+    width:80%;
+    height:var(--heightInp);
+    text-indent:1em;
+    border:1px solid #6c6a6a;
+    border-radius:5px;
+    outline:0;
+    background-position: 300px;
+    background-repeat:no-repeat;
+}
+.form button{
+    width:80%;
+    height:var(--heightInp);
+    background-color:var(--btn2);
+    border:none;
+    border-radius:5px;
+    outline:0;
+    color:var(--branco);
+    font-weight:var(--boldFont);
+    font-size:1em;
+    box-shadow:0px 5px 2px #00000051;
+}
+.form button:hover{
+    background-color:#1ced579f;
+}
+.form h6{
+    color:#918e8e;
+}
+h6 a{
+    color:var(--bg);
+    text-decoration:none;
+}
+@media screen and (max-width:600px){
+    body{
+        flex-direction:column;
+    }
+    .left{
+        height:50vh;
+        width:90vw;
+    }
+    .right{
+        height:50vh;
+        width:90vw;
+    }
+    .right button:first-child{
+        padding:20px 0;
+        margin-bottom:20px;
+    }
+}
