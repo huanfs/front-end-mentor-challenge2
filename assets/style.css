@@ -19,7 +19,8 @@ body{
     justify-content:center;
     background-color:var(--bg);
     background-image:url("../images/bg-intro-desktop.png");
-    font-family:Arial, 'Helvetica', sans-serif
+    font-family:Arial, 'Helvetica', sans-serif;
+    padding:0 1em;
 }
 .left{
     width:550px;
@@ -113,5 +114,8 @@ h6 a{
     .right button:first-child{
         padding:20px 0;
         margin-bottom:20px;
+    }
+    .form h6{
+        margin:0 1.5em;
     }
 }
