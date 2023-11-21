@@ -1,19 +1,37 @@
 let input = document.querySelectorAll("input");
 // let btn = document.querySelectorAll("button")[1];
 let btn = document.querySelectorAll("button")[1];
-btn.addEventListener("click", check);
- function check(){
-     for(let i=0;i<4;i++){
-         if(input[i].value==""){
-             input[i].style.border="1px solid red";
-             input[i].style.color="red";
+btn.addEventListener("click", checkAll);
+input.forEach((x)=>{
+    x.addEventListener("blur", checkItem);
+})
+function checkAll(){
+    for(let i=0;i<4;i++){
+        if(input[i].value==""){
+            input[i].style.border="1px solid red";
+            input[i].style.color="red";
             input[i].style.backgroundImage="url(../images/icon-error.svg)";
-            console.log(input[i].innerHTML);
-         }
-         else{
-            for(let i = 0; i<input.length; i++){
-                input[i].style.color="green";
+        }
+        else{
+            for(let i = 0; i<4; i++){
+                input[i].style.borderColor="green";
             }
-         }
+            setTimeout((x)=>{
+                for(let i=0; i<4; i++){
+                    input[i].style.borderColor="#000";
+                    input[i].value="";
+                }
+            },3000)
+        }
      }
+}
+
+function checkItem(item){
+    if(item.target.value==""){
+        item.target.style.borderColor="red";
+        item.target.style.backgroundImage="url(../images/icon-error.svg)";
+    }
+    else if(item.target.value!=""){
+        item.target.style.borderColor="green";
+    }
 }
