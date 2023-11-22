@@ -16,12 +16,6 @@ function checkAll(){
             for(let i = 0; i<4; i++){
                 input[i].style.borderColor="green";
             }
-            setTimeout((x)=>{
-                for(let i=0; i<4; i++){
-                    input[i].style.borderColor="#000";
-                    input[i].value="";
-                }
-            },3000)
         }
      }
 }

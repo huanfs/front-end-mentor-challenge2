@@ -106,13 +106,15 @@ h6 a{
     body{
         flex-direction:column;
     }
+    .left, .right{
+        min-width:330px;
+        width:90%;
+    }
     .left{
         height:50vh;
-        width:90vw;
     }
     .right{
         height:50vh;
-        width:90vw;
     }
     .right button:first-child{
         padding:20px 0;
